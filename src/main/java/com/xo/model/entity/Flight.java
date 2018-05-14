@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.hibernate.envers.Audited;
 import org.hibernate.envers.RelationTargetAuditMode;
 
@@ -18,6 +20,8 @@ import lombok.EqualsAndHashCode;
 @Entity
 @Audited
 @EqualsAndHashCode(callSuper = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class Flight extends AbstractEntity {
 
     @ManyToOne(optional = false)
