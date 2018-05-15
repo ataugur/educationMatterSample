@@ -40,10 +40,10 @@ public class FlightServiceImplTest {
         //Arrange
         final City city = new City();
         when(cityService.getCity(anyString())).thenReturn(city);
-        Flight flight = new Flight();
+        final Flight flight = new Flight();
         flight.setFrom(city);
         when(flightRepository.save(any())).thenReturn(flight);
-        FlightDto flightDto = new FlightDto();
+        final FlightDto flightDto = new FlightDto();
         flightDto.setFlightNo(SAMPLE_FLIGHT_NO);
         flightDto.setFromCityCode(SAMPLE_CITY_CODE_LA);
         flightDto.setToCityCode(SAMPLE_CITY_CODE_NY);
@@ -60,7 +60,7 @@ public class FlightServiceImplTest {
     @Test
     public void givenWrongCityCodeWhenGetCityThenThrowException() {
         //Arrange
-        FlightDto flightDto = new FlightDto();
+        final FlightDto flightDto = new FlightDto();
         flightDto.setFlightNo(SAMPLE_FLIGHT_NO);
         flightDto.setFromCityCode(SAMPLE_CITY_CODE_LA);
         flightDto.setToCityCode(SAMPLE_CITY_CODE_LA);
