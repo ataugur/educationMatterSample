@@ -16,19 +16,13 @@ class FlightController {
 
     private FlightService flightService;
 
-    FlightController(FlightService flightService) {
-        this.flightService = flightService;
-    }
-
     @PostMapping(FLIGHT_ENDPOINT)
     public FlightDto addFlight(FlightDto flightDto) {
-        return new FlightDto(flightService.addFlight(flightDto));
+        return null;
     }
 
     @GetMapping(FLIGHT_ENDPOINT)
     public List<FlightDto> listFlights(String fromCityCode, String toCityCode, Date date) {
-        return flightService.listFlights(fromCityCode, toCityCode, date).stream()
-                .map(flight -> new FlightDto(flight))
-                .collect(Collectors.toList());
+       return null;
     }
 }
