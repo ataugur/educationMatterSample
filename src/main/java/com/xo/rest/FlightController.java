@@ -22,7 +22,7 @@ class FlightController {
     }
 
     @GetMapping(FLIGHT_ENDPOINT)
-    public List<FlightDto> listFlights(String fromCityCode, String toCityCode, Date date) {
+    public List<FlightDto> listFlights(String fromCityCode, String toCityCode, Date fromDate, Date toDate) {
        return null;
     }
 }
