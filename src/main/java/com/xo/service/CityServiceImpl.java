@@ -22,11 +22,6 @@ class CityServiceImpl implements CityService {
 
     @Override
     public City getCity(String code) {
-        log.debug("Getting city with code {}", code);
-        City city = cityRepository.findByCode(code);
-        if (city == null) {
-            throw new CityNotFoundException(code);
-        }
-        return city;
+        return null;
     }
 }
